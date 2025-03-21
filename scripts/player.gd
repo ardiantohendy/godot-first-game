@@ -2,15 +2,8 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-var coin_count = 0
+
 @onready var animated_sprite = $AnimatedSprite2D
-
-func add_coin():
-	coin_count += 1
-	print("Current Coin: ", coin_count)
-
-func coin_total():
-	print("Total Coin: ", coin_count)
 
 func _physics_process(delta: float) -> void:
 	
