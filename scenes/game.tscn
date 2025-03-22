@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b8rktfh2ynjw3"]
+[gd_scene load_steps=20 format=3 uid="uid://b8rktfh2ynjw3"]
 
 [ext_resource type="PackedScene" uid="uid://py28h0d010fg" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bnopqk4ahf7uo" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tm5bol8m13cg" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c08jqhgi5ai0r" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://od68d223he8i" path="res://scenes/enemy.tscn" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://b87sarf46ia7f" path="res://assets/sprites/coin.png" id="8_0tnpc"]
 [ext_resource type="Script" uid="uid://et4u4jpxalm7" path="res://scripts/hud.gd" id="9_vtaks"]
 [ext_resource type="FontFile" uid="uid://coh7j6kmsucjd" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="10_kvpfn"]
 
@@ -380,26 +381,27 @@ autoplay = "move2"
 [node name="HUD" type="Control" parent="CanvasLayer" groups=["HUD"]]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 106.0
-offset_bottom = 36.0
+offset_right = 176.0
+offset_bottom = 67.0
 script = ExtResource("9_vtaks")
 
 [node name="CoinLabel" type="Label" parent="CanvasLayer/HUD"]
 layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 132.0
-offset_bottom = 43.0
+offset_left = 78.0
+offset_top = 30.0
+offset_right = 120.0
+offset_bottom = 53.0
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("10_kvpfn")
-text = "Coins: 0"
+text = "= 0"
+vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HUD"]
-layout_mode = 0
-offset_left = -71.0
-offset_top = -7.0
-offset_right = -31.0
-offset_bottom = 33.0
-stretch_mode = 2
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/HUD"]
+position = Vector2(44, 44)
+scale = Vector2(4.2, 4.2)
+texture = ExtResource("8_0tnpc")
+region_enabled = true
+region_rect = Rect2(3, 3, 10, 10)
 
 [node name="Enemy" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(689, 68)

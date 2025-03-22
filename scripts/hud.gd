@@ -5,7 +5,7 @@ var coin_count = 0
 	
 func add_coin():
 	coin_count += 1
-	coin_label.text = "Coins: " + str(coin_count)
+	coin_label.text = "= " + str(coin_count)
 	print("Current Coin: ", coin_count)
 	
 func coin_total():
