@@ -375,12 +375,9 @@ libraries = {
 }
 autoplay = "move2"
 
-[node name="Enemy" parent="." instance=ExtResource("6_p57ef")]
-position = Vector2(689, 68)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" type="Control" parent="CanvasLayer"]
+[node name="HUD" type="Control" parent="CanvasLayer" groups=["HUD"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 106.0
@@ -402,3 +399,6 @@ offset_left = -71.0
 offset_top = -7.0
 offset_right = -31.0
 offset_bottom = 33.0
+
+[node name="Enemy" parent="." instance=ExtResource("6_p57ef")]
+position = Vector2(689, 68)

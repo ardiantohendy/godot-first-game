@@ -15,6 +15,10 @@ run/main_scene="uid://b8rktfh2ynjw3"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[global_group]
+
+HUD=""
+
 [input]
 
 jump={

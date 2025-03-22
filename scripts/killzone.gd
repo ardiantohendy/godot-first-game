@@ -1,7 +1,10 @@
 extends Area2D
 
 @onready var timer = $Timer
-@onready var hud = $"../CanvasLayer/HUD"
+#YG di bawah ini pake node -> groups dan buat global group/ 
+#dengan ini Tidak bergantung pada struktur node dan Tetap bisa 
+#menemukan HUD meskipun path berubah atau Enemy berpindah ke scene lain.
+@onready var hud = get_tree().get_first_node_in_group("HUD")
 
 
 func _on_body_entered(body: Node2D) -> void:
