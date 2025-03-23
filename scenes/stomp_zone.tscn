@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6cnlnsg1j0p5"]
+
+[ext_resource type="Script" uid="uid://6fk6d4okp2un" path="res://scripts/stomp_zone.gd" id="1_y12q7"]
+
+[node name="StompZone" type="Area2D"]
+script = ExtResource("1_y12q7")

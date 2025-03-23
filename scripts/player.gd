@@ -23,7 +23,6 @@ func _physics_process(delta: float) -> void:
 		if not has_jumped:
 			has_jumped = true  
 			
-			
 	if not is_on_floor() and not has_jumped:
 		jump_left = 1
 		JUMP_VELOCITY = -380
